@@ -1,0 +1,35 @@
+HTTP 2.0 ---->
+
+In 2015, Internet Engineering Task Force (IETF) release HTTP/2, the second major version of the most useful internet protocol, HTTP. It was derived from the earlier experimental SPDY protocol.
+Main goals of developing HTTP/2 was:
+1. Protocol negotiation mechanism — protocol electing, eg. HTTP/1.1, HTTP/2 or other.
+2. High-level compatibility with HTTP/1.1 — methods, status codes, URIs and header fields.
+3. Page load speed improvements trough:
+4. Compression of request headers
+5. Binary protocol
+6. HTTP/2 Server Push
+7. Request multiplexing over a single TCP connection
+8. Request pipelining
+9. HOL blocking (Head-of-line) — Package blocking
+
+Request multiplexing --->
+HTTP/2 can send multiple requests for data in parallel over a single TCP connection. This is the most advanced feature of the HTTP/2 protocol because it allows you to download web files asynchronously from one server. Most modern browsers limit TCP connections to one server.
+
+Header compression --->
+HTTP/2 compress a large number of redundant header frames. It uses the HPACK specification as a simple and secure approach to header compression. Both client and server maintain a list of headers used in previous client-server requests.
+
+Binary protocol --->
+The latest HTTP version has evolved significantly in terms of capabilities and attributes such as transforming from a text protocol to a binary protocol. HTTP1.x used to process text commands to complete request-response cycles. HTTP/2 will use binary commands (in 1s and 0s) to execute the same tasks. This attribute eases complications with framing and simplifies implementation of commands that were confusingly intermixed due to commands containing text and optional spaces.
+Browsers using HTTP/2 implementation will convert the same text commands into binary before transmitting it over the network.
+
+Benefits: ---->
+
+Low overhead in parsing data — a critical value proposition in HTTP/2 vs HTTP1.
+Less prone to errors.
+Lighter network footprint.
+Effective network resource utilization.
+Eliminating security concerns associated with the textual nature of HTTP1.x such as response splitting attacks.
+Enables other capabilities of the HTTP/2 including compression, multiplexing, prioritization, flow control and effective handling of TLS.
+Compact representation of commands for easier processing and implementation.
+Efficient and robust in terms of processing of data between client and server.
+Reduced network latency and improved throughput.
