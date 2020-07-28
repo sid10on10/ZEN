@@ -3,7 +3,7 @@
 // Create a request variable and assign a new XMLHttpRequest object to it.
 var request = new XMLHttpRequest()
 let city = 'varanasi'
-let api_key = '4b83b512b8a0c3028cf6fa4cd0a9f4c2'
+let api_key = '';
 let proxy = 'https://cors-anywhere.herokuapp.com/'
 
 // Open a new connection, using the GET request on the URL endpoint
