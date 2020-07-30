@@ -1,4 +1,4 @@
-let arr = ["week1","week2","anony","HiWorld"];
+let arr = ["week1","week2","anony","HiWorld","aabbbbaa"];
 
 (function(){
  let newarr = arr.map((data)=>{
