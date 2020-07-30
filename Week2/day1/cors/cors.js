@@ -7,7 +7,7 @@ var request = new XMLHttpRequest()
 let url_string = 'https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com';
 let proxy = 'https://cors-anywhere.herokuapp.com/'
 request.open('GET', proxy+url_string, true)
-//request.setRequestHeader('Access-Control-Allow-Origin', 'www.google.com');
+//request.setRequestHeader('Access-Control-Allow-Options', '*');
 request.send();
 request.onload = function() {
   // Begin accessing JSON data here

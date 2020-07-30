@@ -1,0 +1,49 @@
+Error Handling:
+
+The developer must assume all possible errors that will occur ad design so as to minimize the chance of error or its effects once it mde.
+
+Errors should be easy to detect , the should have minimal consequences.
+
+Steps:
+1.Assume your code will fail
+2.Log errors to the server
+3.you,not the browser,handle errors
+ 1. try-catch :
+   try{
+   operation();
+   }catch(ex){
+   log(2,"operation() failed"+ex.message);
+   }
+ 2.window.onerror
+   window.onerror = function(msg,url,line){
+   log(1,msg);
+   retrun true;
+   };
+
+ Flow :Error --> try-catch --> window.onerror --> browser error
+4. Identify where errors might occur
+  1.Type coercion errors
+  2.Data type erros
+  3.communication errors
+    -Invalid url/post data
+	-Server response status
+	-no network connection
+	-server response content
+5. Throw your own errors
+  - throw - low level applications
+  - try catch - high level applications
+6.Distinguish fatal vs non-fatal
+  NonFatal:
+    - Wont interfere with users main task
+	- recovery is possible
+	- repeat of action
+    - dont tell user it isnt working unless necessary
+  Fatal:
+    - application cant continue
+    - interfere with user task
+    - message user immediately
+    - reload
+7. Provide a debug mode
+   - try catch should rethrow the error
+   - window.onerror should return false
+   - allow browser to handle the error   
