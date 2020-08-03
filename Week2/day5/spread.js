@@ -19,7 +19,14 @@ console.log(firstName)
 console.log(age)
 console.log(sex)
   
-function joinFirstLastName({firstName, lastName}) {
+const person = {
+    firstName:"GUVI",
+    lastName:"GEEK",
+    age:3,
+    sex:"M"
+}
+
+function joinFirstLastName({firstName, lastName}) { // setting values by destructuring
     return firstName + '-' + lastName;
 }
   
