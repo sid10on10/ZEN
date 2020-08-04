@@ -40,7 +40,7 @@ class TV{
 
 class LED extends TV{
     constructor(screenThickness, energyUse, lifeSpan, refreshRate, ...args){
-        super(args);
+        super(...args);
         this.screenThickness = screenThickness;
         this.energyUse = energyUse;
         this.lifeSpan = lifeSpan;
@@ -81,5 +81,5 @@ class PlasmaTV extends TV{
 let mytv = new TV("samsung",100,150,"On")
 console.log(mytv)
 
-let myLED = new LED(150,5,10,50,brand="INTEX",price=10000,inches=150,OnOffstatus="ON")
+let myLED = new LED(150,5,10,50,"INTEX",10000,150,"ON",2,90)
 console.log(myLED)
