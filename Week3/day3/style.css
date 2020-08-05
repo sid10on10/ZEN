@@ -2,7 +2,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(15, 10, 21, 0.954);
-    z-index: -1;
 }
 .header-div {
     width: 100%;
@@ -114,5 +113,12 @@ p {
     transform: skewY(5deg);
     position: absolute;
     margin-top: 105px;
+}
+.final-div {
+    width: 100%;
+    height: 500px;
+    background-color: #F3AD9D;
+    position: absolute;
+    z-index: -1;
 
 }
