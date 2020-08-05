@@ -1,0 +1,63 @@
+body
+{
+padding:0px;
+margin:0px;
+background: #ccc;
+}
+
+.wd100
+{
+width:100%
+}
+.wd50
+{
+width:48%
+}
+.pdy{
+padding-top:5px;
+padding-bottom:5px;
+border-bottom : 2px solid #ccc;
+}
+.text_center
+{
+text-align:center
+}
+.bdr
+{
+border-right : 2px solid #ccc;
+}
+.mrglr
+{
+margin-left:25px
+margin-right:25px
+margin-top:15px
+margin-bottom:15px
+}
+.h1{
+    background-color: #e9b83f;
+    position: absolute;
+    left: 36%;
+    top: 176px;
+    width: 370px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    border-radius: 10px;
+    font-size: revert;
+}
+.container 
+{
+width:1000px;
+margin:auto;
+background: white;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:60px
+margin-top: -14px;
+}
+.container1
+{
+width:1040px;
+margin:auto;
+background: white;
+margin-bottom: -13px;
+}
