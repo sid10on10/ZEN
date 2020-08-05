@@ -1,0 +1,118 @@
+.outermost-div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 10, 21, 0.954);
+    z-index: -1;
+}
+.header-div {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+.second-div {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/1.png);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+p {
+    z-index: 1;
+    color: black;
+}
+.third-div {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    background-image: url(./img/2.jpg);
+}
+.fourth-div {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/3.jpg);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+.five-div {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/4.jpg);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+.six-div {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/5.jpg);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+.seven-div {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/6.jpg);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    transform: skewY(5deg);
+    position: absolute;
+    top: 150px;
+}
+.second-content-div {
+    height: 250px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+.second-header {
+    transform: skewY(5deg);
+    position: absolute;
+    margin-top: 105px;
+
+}
