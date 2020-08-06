@@ -44,7 +44,7 @@ p {
     z-index: 0;
     margin: 0;
     padding: 0;
-    background-image: url(./img/2.jpg);
+    background: linear-gradient(rgba(138, 28, 106, 0.7), rgba(220,150,200,0.7)), url("./img/2.jpg");
 }
 .fourth-div {
     width: 100%;
@@ -138,3 +138,5 @@ p {
     outline: 1px dashed #fff;
     outline-offset: -40px;
 }
+
+/*background: linear-gradient(rgba(),rgba()), url("");*/
