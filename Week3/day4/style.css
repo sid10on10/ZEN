@@ -22,3 +22,26 @@
     width: 100%;
     height: auto;
 }
+.bdr{
+    border-top:1px solid #808080bf;
+    border-bottom:1px solid #808080bf;
+}
+.header-center {
+    position: relative;
+    left: 170px;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid black;
+    
+}
+.border-div {
+    border:2px solid black;
+    padding-right: 4px;
+}
+.article-img {
+    position: relative;
+    right: 10px;
+}
