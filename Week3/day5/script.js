@@ -11,7 +11,7 @@ let header_div = document.createElement('div')
 header_div.setAttribute('style','height:400px;width:100%;background-color:grey;align-content:center;')
 
 let image_div = document.createElement('div')
-image_div.setAttribute('style','width:190px;height:190px;position:relative;left:340px;top:150px;')
+image_div.setAttribute('style','width:190px;height:190px;position:relative;left:410px;top:150px;')
 
 let profile_pic = document.createElement('img')
 profile_pic.setAttribute('src','1.jpg')
@@ -21,7 +21,7 @@ let header_bar = document.createElement('div')
 header_bar.setAttribute('style','background-color:white;height:45px;position:relative;top:130px;')
 
 let header_name = document.createElement('div')
-header_name.setAttribute('style','background-color:#F3B02A;width:500px;height:80px;font-size:50px;text-align:center;padding-top:20px;margin-left:185px;margin-top:60px;position:relative;font-family:monospace;')
+header_name.setAttribute('style','background-color:#F3B02A;width:500px;height:80px;font-size:50px;text-align:center;padding-top:20px;margin-left:255px;margin-top:60px;position:relative;font-family:monospace;')
 header_name.innerText = "Siddhant Singh"
 
 

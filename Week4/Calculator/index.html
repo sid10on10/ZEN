@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outerbox">
+        <div class="innerbox">
+            <h1 style="font-size: 30px;font-family:monospace;text-align: center;color: white;">Calculator</h1>
+            <div class="display_div">
+                <input type="text" class="display" id="result" onkeypress="return onlyNumberKey(event)">
+            </div>
+            <div class="keys">
+                <div class="col-1">
+                    <table>
+                        <tr>
+                            <td><button class="input_button" value="1" onclick="display('1')">1</button></td>
+                            <td><button class="input_button" value="2" onclick="display('2')">2</button></td>
+                            <td><button class="input_button" value="3" onclick="display('3')">3</button></td>
+                            <td><button class="input_button" value="4" onclick="display('4')">4</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="input_button" value="5" onclick="display('5')">5</button></td>
+                            <td><button class="input_button" value="6" onclick="display('6')">6</button></td>
+                            <td><button class="input_button" value="7" onclick="display('7')">7</button></td>
+                            <td><button class="input_button" value="8" onclick="display('8')">8</button></td>
+        
+                        </tr>
+                        <tr>
+                            <td><button class="input_button" value="9" onclick="display('9')">9</button></td>
+                            <td><button class="input_button" value="0" onclick="display('0')">0</button></td>
+                            <td><button class="input_button" value="=" onclick="solve()">=</button></td>
+                            <td><button class="input_button" value="." onclick="display('.')">.</button></td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-2">
+                    <table class="operator-table">
+                        <tr>
+                            <td><button class="input_button" value="/" onclick="display('/')">/</button></td>
+                            <td><button class="input_button" value="*" onclick="display('*')">*</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="input_button" value="+" onclick="display('+')">+</button></td>
+                            <td><button class="input_button" value="-" onclick="display('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="input_button" value="%" onclick="display('%')">%</button></td>
+                            <td><button class="input_button" onclick="clearscreen()">Clear</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
