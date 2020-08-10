@@ -24,13 +24,21 @@ another_div.setAttribute('style','margin-top:60px;')
 
 // generate button
 let generate_button = document.createElement("button")
-generate_button.setAttribute('style','width:80px;height:40px;background-color:#007bff;margin-left:270px;')
+generate_button.setAttribute('style','width:80px;height:40px;background-color:#007bff;margin-left:260px;')
 generate_button.innerText = "Generate"
 generate_button.setAttribute('onclick','generate()')
 another_div.appendChild(generate_button)
 
+// constraints
 
-container1.append(display,another_div)
+let constraints = document.createElement('div')
+constraints.setAttribute('style','margin-top:100px;')
+constraints.innerHTML = "<h2>1. 8-digits in the random number</h2><h2>2. No digits are repeated in the number</h2>";
+constraints.setAttribute('style','margin-left:115px;margin-top:50px;')
+
+
+
+container1.append(display,another_div,constraints)
 container.appendChild(container1)
 main.append(container)
 
