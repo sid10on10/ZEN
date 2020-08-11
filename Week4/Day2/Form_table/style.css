@@ -1,0 +1,41 @@
+.outerbox {
+    height: 100%;
+    margin: 50px;
+    color: white;
+}
+.form-container {
+    height:auto;
+    background-color: #2ab7ca;
+}
+.table-container {
+    height:100%;
+    margin-top: 50px;
+    background-color: #011f4b;
+    justify-content: center;
+}
+.input {
+    margin-left: 20px;
+    width: 250px;
+}
+.input-container {
+    margin-top: 30px;
+}
+.food {
+    width:300px;
+    margin-top: 20px;
+    height:150px;
+    margin-left: 20px;
+}
+.result-output {
+    color: white;
+    border: 2px solid white;
+    margin-top: 20px;
+}
+
+th {
+    padding: 20px;
+}
+td {
+    padding: 20px;
+}
+

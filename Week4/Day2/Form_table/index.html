@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Tables</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container outerbox">
+        <div class="row form-container">
+            <div class="col-12">
+                <form onsubmit="dataInput()">
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="firstname">First Name</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="firstname" required></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="lastname">Last Name</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="lastname"></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="address">Address</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input"  id="address"></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="pincode">Pin Code</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input"  id="pincode"></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="gender">Gender</label></span>
+                        <span style="display: inline-block;"><select name="genderchoice" id="gender" class="input">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="foodchoice">Choice of Food</label></span>
+                        <span style="display: inline-block;"><select class="food" name="choiceoffood" id="foodchoice" multiple size="2">
+                            <option value="">--Hold ctrl select two--</option>
+                            <option value="Dosa">Dosa</option>
+                            <option value="Idli">Idli</option>
+                            <option value="Uttpam">Uttpam</option>
+                            <option value="Sambhar">Sambhar</option>
+                            <option value="Milk">Milk</option>
+                        </select></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="state">State</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="state"></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <span style="display: inline-block;"><label for="country">Country</label></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="country"></span>
+                    </div>
+                    <div class="row input-container justify-content-center">
+                        <input type="submit" class="input" style="background-color:#851e3e;color:white;">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row table-container">
+            <table class="result-output" id="output">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th colspan="2">Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                    <td>Siddhant</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
