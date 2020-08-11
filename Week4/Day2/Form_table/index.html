@@ -17,26 +17,28 @@
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="lastname">Last Name</label></span>
-                        <span style="display: inline-block;"><input type="text" class="input" id="lastname"></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="lastname" required></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="address">Address</label></span>
-                        <span style="display: inline-block;"><input type="text" class="input"  id="address"></span>
+                        <span style="display: inline-block;"><input type="text" class="input"  id="address" required></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="pincode">Pin Code</label></span>
-                        <span style="display: inline-block;"><input type="text" class="input"  id="pincode"></span>
+                        <span style="display: inline-block;"><input type="text" class="input"  id="pincode" required></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="gender">Gender</label></span>
-                        <span style="display: inline-block;"><select name="genderchoice" id="gender" class="input">
+                        <span style="display: inline-block;"><select name="genderchoice" id="gender" class="input" required>
+                            <option value="">--Select a gender---</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="foodchoice">Choice of Food</label></span>
-                        <span style="display: inline-block;"><select class="food" name="choiceoffood" id="foodchoice" multiple size="2">
+                        <span style="display: inline-block;"><select class="food" name="choiceoffood" id="foodchoice" multiple size="2" required>
                             <option value="">--Hold ctrl select two--</option>
                             <option value="Dosa">Dosa</option>
                             <option value="Idli">Idli</option>
@@ -47,11 +49,11 @@
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="state">State</label></span>
-                        <span style="display: inline-block;"><input type="text" class="input" id="state"></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="state" required></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <span style="display: inline-block;"><label for="country">Country</label></span>
-                        <span style="display: inline-block;"><input type="text" class="input" id="country"></span>
+                        <span style="display: inline-block;"><input type="text" class="input" id="country" required></span>
                     </div>
                     <div class="row input-container justify-content-center">
                         <input type="submit" class="input" style="background-color:#851e3e;color:white;">
@@ -70,17 +72,6 @@
                     <th colspan="2">Food</th>
                     <th>State</th>
                     <th>Country</th>
-                </tr>
-                <tr>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
-                    <td>Siddhant</td>
                 </tr>
             </table>
         </div>
