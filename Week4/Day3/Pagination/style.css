@@ -1,0 +1,20 @@
+.outerbox {
+    height: 100%;
+    margin: 50px;
+    color: white;
+    background-color: #011f4b;
+}
+
+.innercontainer {
+    height:auto;
+    margin-top: 50px;
+    background-color: #011f4b;
+    justify-content: center;
+}
+
+#row {
+    height:300px;
+    background-color: #011f4b;
+    border: 2px solid white;
+}
+
