@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="width: 200px;">
+        <h1 id="result" style="color:white"></h1>
+    </div>
+    <script>
+        setTimeout(function(){
+                  document.getElementById('result').innerText='10';
+                  setTimeout(function(){
+                  document.getElementById('result').innerText='9';
+                       setTimeout(function(){
+                       document.getElementById('result').innerText='8';
+                          setTimeout(function(){
+                          document.getElementById('result').innerText='7';
+                              setTimeout(function(){
+                              document.getElementById('result').innerText='6';
+                                  setTimeout(function(){
+                                  document.getElementById('result').innerText='5';
+                                      setTimeout(function(){
+                                      document.getElementById('result').innerText='4';
+                                         setTimeout(function(){
+                                         document.getElementById('result').innerText='3';
+                                             setTimeout(function(){
+                                             document.getElementById('result').innerText='2';
+                                                 setTimeout(function(){
+                                                 document.getElementById('result').innerText='1';
+                                                    setTimeout(function(){
+                                                    document.getElementById('result').innerText='HAPPY INDEPENDENCE DAY';
+                                                     
+                                                    },1000)
+                                                 },1000)
+                                             },1000)
+                                        },1000)
+                                    },1000)
+                               },1000)
+                            },1000)
+                        },1000)
+                   },1000)
+              },1000)
+            })
+    </script>
+</body>
+
+</html>
