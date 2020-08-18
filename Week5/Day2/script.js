@@ -11,29 +11,23 @@ main.appendChild(header_div)
 main.appendChild(mydiv)
 
 
-let request = obj => {
-    return new Promise((resolve, reject) => {
-        let xhr = new XMLHttpRequest();
-        xhr.open(obj.method || "GET", obj.url);
-        if (obj.headers) {
-            Object.keys(obj.headers).forEach(key => {
-                xhr.setRequestHeader(key, obj.headers[key]);
-            });
+function getinfo() {
+    var xhr = new XMLHttpRequest();
+    return new Promise(function(resolve, reject) {
+     xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if (xhr.status >= 300) {
+            reject("Error, status code = " + xhr.status)
+          } else {
+            resolve(xhr.responseText);
+          }
         }
-        xhr.onload = () => {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                resolve(xhr.response);
-            } else {
-                reject(xhr.statusText);
-            }
-        };
-        xhr.onerror = () => reject(xhr.statusText);
-        xhr.send(obj.body);
+      }
+      xhr.open('get', 'https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json', true)
+      xhr.send();
     });
-};
-
-request({url: "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json"})
-.then(data=>{
+  }
+  getinfo().then(data=>{
     arr = JSON.parse(data)
     console.log(arr)
     for(let i=0;i<data.length;i++){
