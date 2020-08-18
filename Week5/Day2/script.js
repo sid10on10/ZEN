@@ -1,6 +1,6 @@
 let main = document.body
 let mydiv = document.createElement("div")
-mydiv.setAttribute("style","background-color:grey;width:100%;height:auto;")
+mydiv.setAttribute("style","width:100%;height:auto;")
 mydiv.setAttribute("class","card-group")
 let header_div = document.createElement("div")
 header_div.setAttribute("style","text-align:center;color:black;")
