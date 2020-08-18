@@ -1,8 +1,13 @@
 let main = document.body
 let mydiv = document.createElement("div")
-mydiv.setAttribute("style","background-color:grey;width:100%;height:auto;display:flex;justify-content:center;")
-let ol = document.createElement("ol")
-mydiv.appendChild(ol)
+mydiv.setAttribute("style","background-color:grey;width:100%;height:auto;")
+mydiv.setAttribute("class","card-group")
+let header_div = document.createElement("div")
+header_div.setAttribute("style","text-align:center;color:black;")
+let header = document.createElement("h1")
+header.innerText = "World Countries Data";
+header_div.appendChild(header)
+main.appendChild(header_div)
 main.appendChild(mydiv)
 
 
@@ -32,8 +37,9 @@ request({url: "https://raw.githubusercontent.com/rvsp/restcountries-json-data/ma
     arr = JSON.parse(data)
     console.log(arr)
     for(let i=0;i<data.length;i++){
-        let li = document.createElement("li")
-        li.setAttribute("style","display:flex;justify-content:center;")
+        let outer_div = document.createElement("div")
+        outer_div.setAttribute("style","display:flex;justify-content:center;padding:5px;")
+        outer_div.setAttribute("class","col-4")
         let card_div = document.createElement("div")
         card_div.setAttribute("class","card")
         let flag_img = document.createElement("img")
@@ -71,7 +77,7 @@ request({url: "https://raw.githubusercontent.com/rvsp/restcountries-json-data/ma
 
         card_div.appendChild(flag_img)
         card_div.appendChild(card_body)
-        li.appendChild(card_div)
-        ol.appendChild(li)
+        outer_div.appendChild(card_div)
+        mydiv.appendChild(outer_div)
     }
 })
