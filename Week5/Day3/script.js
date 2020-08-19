@@ -20,7 +20,7 @@ async function getData(url){
 
 async function display(a,b)
       {
-      	let data= await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=4b83b512b8a0c3028cf6fa4cd0a9f4c2`);
+      	let data= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=4b83b512b8a0c3028cf6fa4cd0a9f4c2`);
       	let jsondata= await data.json();
           alert("Temprature: "+jsondata.main.temp+" F "+"\n Description: "+ 
           	jsondata.weather[0].description);
