@@ -1,40 +1,29 @@
-let main = document.body
-main.setAttribute("style","background-color:#56a5eb;")
-let outer = document.createElement("div")
-outer.setAttribute("class","container")
+var baseDiv = document.createElement("div");
+baseDiv.setAttribute("class","container");
 
-let innerdiv = document.createElement("div")
-innerdiv.setAttribute("class","center column")
-innerdiv.setAttribute("style","margin-top:300px;")
+var div1 = document.createElement("div");
+div1.setAttribute("id","home");
+div1.setAttribute("class","flex-center flex-column");
 
-let header = document.createElement("h1")
-header.innerText = "Quick Quiz";
-header.setAttribute("style","font-size: 5.4rem;margin-bottom: 5rem;font-family: Arial, Helvetica, sans-serif;")
-innerdiv.appendChild(header)
+var h11 = document.createElement("h1");
+h11.innerHTML = "OpenTrivia Quiz";
 
-let playbutton = document.createElement("button")
-playbutton.setAttribute("id","play")
-playbutton.setAttribute("href","game.html")
-playbutton.innerText = "Play"
-playbutton.setAttribute("class","btn")
-innerdiv.appendChild(playbutton)
+var but1 = document.createElement("button");
+but1.setAttribute("id","play");
+but1.setAttribute("class","btn");
+but1.setAttribute("onclick","location.href = './game.html';");
+but1.innerHTML = "Play";
 
-let highbutton = document.createElement("button")
-highbutton.setAttribute("id","highScores")
-highbutton.setAttribute("href","highscore.html")
-highbutton.setAttribute("class","btn")
-highbutton.innerText = "High Scores"
-innerdiv.appendChild(highbutton)
+var but2 = document.createElement("button");
+but2.setAttribute("id","highscores");
+but2.setAttribute("class","btn");
+but2.setAttribute("onclick","location.href = './highscores.html';");
+but2.innerHTML = "High Scores";
 
-outer.appendChild(innerdiv)
-main.appendChild(outer)
+div1.appendChild(h11);
+div1.appendChild(but1);
+div1.appendChild(but2);
 
+baseDiv.appendChild(div1);
 
-async function getData(url){
-    let country = await fetch(url)
-    let arr = await country.json()
-    return arr
-}
-
-
-
+document.body.append(baseDiv);
