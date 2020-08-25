@@ -5,3 +5,11 @@ let chunk  = function (arr:[],k:number){
     }
     return outarr
   }
+
+  let sum = function (arr:[]){
+    let sum = 0;
+    for(i of arr){
+      sum+=i
+    }
+    return sum
+  }
