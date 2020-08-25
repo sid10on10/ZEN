@@ -23,3 +23,11 @@ let chunk  = function (arr:[],k:number){
     }
     return outarr
   }
+
+  let find = function (arr,condition){
+    for(let i=0;i<arr.length;i++){
+      if(condition(arr[i])==true){
+        return arr[i]
+      }
+    }
+  }
