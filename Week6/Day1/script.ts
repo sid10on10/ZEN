@@ -13,3 +13,13 @@ let chunk  = function (arr:[],k:number){
     }
     return sum
   }
+
+  let filter = function (arr){
+    let outarr = []
+    for(i of arr){
+      if(i>5){
+        outarr.push(i)
+      }
+    }
+    return outarr
+  }
