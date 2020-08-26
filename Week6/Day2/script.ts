@@ -84,14 +84,26 @@ class availability extends request{
 let petShop = new availability();
 
 let pet1 = new pet({
-    name: 'shiro',
+    name: 'Tommy',
     type: "dog",
-    color: 'white',
-    age : 2,
+    color: 'black',
+    age : 3,
     breed: "dog",
-    history: "New Born",
-    Location: "chennai",
+    history: "Adopted",
+    Location: "Mumbai",
 });
 
 petShop.insert(pet1);
+
+let pet2 = new pet({
+  name: 'Dogo',
+  type: "dog",
+  color: 'black',
+  age : 4,
+  breed: "dog",
+  history: "Owned once by Vishal",
+  Location: "Chennai",
+});
+
+petShop.insert(pet2);
 
