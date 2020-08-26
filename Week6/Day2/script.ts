@@ -1,4 +1,4 @@
-class Pet {
+class pet {
   name: string;
   type: string;
   color: string;
@@ -7,15 +7,15 @@ class Pet {
   history: string;
   Location: string;
 
-  constructor(name,type,color,age,breed,history,Location) { 
-      this.name = name;
-      this.type = type;
-      this.color = color;
-      this.age = age;
-      this.breed = breed;
-      this.history = history;
-      this.Location = Location;
-  }
+  constructor(parameters) { 
+    this.name = parameters.name;
+    this.type = parameters.type;
+    this.color = parameters.color;
+    this.age = parameters.age;
+    this.breed = parameters.breed;
+    this.history = parameters.history;
+    this.Location = parameters.Location;
+}
 }
 
 class request {
@@ -57,6 +57,7 @@ class request {
 
 }
 
+
 class availability extends request{
   pets: pet[] = [];
 
@@ -81,40 +82,41 @@ class availability extends request{
 
 }
 
+
 let petShop = new availability();
 
 let pet1 = new pet({
-    name: 'Tommy',
-    type: "dog",
-    color: 'black',
-    age : 3,
-    breed: "dog",
-    history: "Adopted",
-    Location: "Mumbai",
+  name: 'shiro',
+  type: "dog",
+  color: 'white',
+  age : 2,
+  breed: "dog",
+  history: "New Born",
+  Location: "chennai",
 });
 
 petShop.insert(pet1);
 
 let pet2 = new pet({
-  name: 'Dogo',
+  name: 'hima',
   type: "dog",
-  color: 'black',
-  age : 1,
+  color: 'brown',
+  age : 4,
   breed: "dog",
-  history: "Owned once by Vishal",
-  Location: "Chennai",
+  history: "Owned by rajesh",
+  Location: "chennai",
 });
 
 petShop.insert(pet2);
 
 let pet3 = new pet({
-  name: 'Black Cat',
+  name: 'momo',
   type: "cat",
-  color: 'black',
-  age : 3,
+  color: 'white',
+  age : 2,
   breed: "cat",
   history: "New Born",
-  Location: "Varanasi",
+  Location: "chennai",
 });
 
 petShop.insert(pet3);
@@ -143,5 +145,5 @@ let pet5 = new pet({
 
 petShop.insert(pet5);
 
-petShop.storeEnquiry([{color: 'black', type : 'dog'}]);
 
+petShop.storeEnquiry([{color: 'white', type : 'dog'}]);
