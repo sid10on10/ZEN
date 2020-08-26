@@ -99,11 +99,49 @@ let pet2 = new pet({
   name: 'Dogo',
   type: "dog",
   color: 'black',
-  age : 4,
+  age : 1,
   breed: "dog",
   history: "Owned once by Vishal",
   Location: "Chennai",
 });
 
 petShop.insert(pet2);
+
+let pet3 = new pet({
+  name: 'Black Cat',
+  type: "cat",
+  color: 'black',
+  age : 3,
+  breed: "cat",
+  history: "New Born",
+  Location: "Varanasi",
+});
+
+petShop.insert(pet3);
+
+let pet4 = new pet({
+  name: 'nemo',
+  type: "fish",
+  color: 'golden orange',
+  age : 2,
+  breed: "gold fish",
+  history: "owned by gupta",
+  Location: "chennai",
+});
+
+petShop.insert(pet4);
+
+let pet5 = new pet({
+  name: 'meow',
+  type: "cat",
+  color: 'black',
+  age : 2,
+  breed: "cat",
+  history: "New Born",
+  Location: "chennai",
+});
+
+petShop.insert(pet5);
+
+petShop.storeEnquiry([{color: 'black', type : 'dog'}]);
 
