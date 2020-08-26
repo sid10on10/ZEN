@@ -57,3 +57,27 @@ class request {
 
 }
 
+class availability extends request{
+  pets: pet[] = [];
+
+  constructor(){ super(); }
+
+  insert(newPet: pet) {
+      this.pets.push(newPet);
+  }
+
+  removePet(name: string) {
+      let elementIndex = this.pets.findIndex(element => element.name  == name);
+      this.pets.splice(elementIndex, 1);
+  }
+
+  count() { 
+      let pets = this.pets.reduce((acc, element) => {
+          acc[element.type] ? acc[element.type]++ : acc[element.type] = 1
+          return acc;
+      },{});
+      return pets;
+  }
+
+}
+
