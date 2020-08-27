@@ -58,7 +58,9 @@ document.getElementById("top").addEventListener("click", function (e) { return _
                 return [4 /*yield*/, response.json()];
             case 2:
                 data = _a.sent();
-                console.log(data);
+                data.tracks.forEach(function (element) {
+                    console.log(element.hub.actions[1].uri);
+                });
                 return [2 /*return*/];
         }
     });
