@@ -41,7 +41,9 @@ async (e)=>{
         }
     });
     let data = await response.json();
-    console.log(data);
+    data.tracks.forEach((element:RapidAPI) => {
+        console.log(element.hub.actions[1].uri)
+    });
 }
 );
 
