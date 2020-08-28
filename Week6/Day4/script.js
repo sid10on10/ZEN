@@ -36,9 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 var Card = /** @class */ (function () {
-    function Card(url) {
+    function Card(url, img, heading) {
         this.url = url;
-        document.getElementById("audio-holder").innerHTML += "<div class=\"row\"><audio controls><source src=\"" + this.url + "\" type=\"audio/mp4a\"></audio></div>";
+        this.img = img;
+        this.heading = heading;
+        document.getElementById("audio-holder").innerHTML += "<div class=\"card mb-3\" style=\"max-width: 540px;\"><div class=\"row no-gutters\"><div class=\"col-md-4\"><img src=\"" + this.img + "\" class=\"card-img\"></div><div class=\"col-md-8\"><div class=\"card-body\"><h5 class=\"card-title\">" + this.heading + "</h5><audio controls><source src=\"" + this.url + "\"></audio></div></div></div></div>";
     }
     return Card;
 }());
@@ -58,8 +60,15 @@ document.getElementById("top").addEventListener("click", function (e) { return _
                 return [4 /*yield*/, response.json()];
             case 2:
                 data = _a.sent();
+                console.log(data);
+                document.getElementById("audio-holder").innerHTML = "";
                 data.tracks.forEach(function (element) {
-                    console.log(element.hub.actions[1].uri);
+                    if (element.hub.actions == undefined) {
+                        // pass
+                    }
+                    else {
+                        var card = new Card(element.hub.actions[1].uri, element.images.background, element.title);
+                    }
                 });
                 return [2 /*return*/];
         }
@@ -78,10 +87,19 @@ document.getElementById("recommend").addEventListener("click", function (e) { re
                 })];
             case 1:
                 response = _a.sent();
+                document.getElementById("audio-holder").innerHTML = "";
                 return [4 /*yield*/, response.json()];
             case 2:
                 data = _a.sent();
                 console.log(data);
+                data.tracks.forEach(function (element) {
+                    if (element.hub.actions == undefined) {
+                        // pass
+                    }
+                    else {
+                        var card = new Card(element.hub.actions[1].uri, element.images.background, element.title);
+                    }
+                });
                 return [2 /*return*/];
         }
     });
