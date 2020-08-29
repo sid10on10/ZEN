@@ -2,9 +2,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tv & Remote</title>
+    <title>TV & Remote</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<style>
+    .remote{
+        position: absolute;
+        top: 20px;
+        right: 50%;
+    }
+    .tv{
+        position: absolute;
+        top: 10px;
+        right:50px;
+    }
+</style>
 <body>
+    <div class="container">
+        <div class="container-fluid">
+            <img src="assets/remote.jpg" usemap="#image-map" class="remote">
+
+            <map name="image-map">
+                <area id="+" alt="+" title="+" coords="499,411,27" shape="circle">
+                <area id="-" alt="-" title="-" coords="395,414,29" shape="circle">
+                <area id="next" alt="" title="next" coords="503,352,25" shape="circle">
+                <area id="prev" alt="" title="prev" coords="395,352,24" shape="circle">
+                <area id="power" alt="" title="power" coords="448,247,54" shape="circle">
+                <area id="mute" alt="" title="mute" coords="502,142,22" shape="circle">
+            </map>
+
+            <img src="assets/tv.jpg" alt="tv" style="width:600px;height:600px;margin-left:100px;" class="tv">
+            
+            <video  width="710px" height="390px" id="video_player" autoplay>
+            
+            </video>
+            <div id="notification">
+                
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
