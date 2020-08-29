@@ -13,7 +13,7 @@ container.appendChild(row1);
 //.................row2 col1...................................................
 var row2 = document.createElement("div");
 row2.setAttribute("class", "row");
-row2.setAttribute("style", "border-top:solid grey 1px;border-bottom:solid grey 1px;padding-top:10px;padding-bottom:10px;");
+row2.setAttribute("style", "padding-top:10px;padding-bottom:10px;");
 var row2col1 = document.createElement("div");
 row2col1.setAttribute("class", "col-md-4");
 row2col1.setAttribute("style", "text-align:center;");
@@ -28,7 +28,7 @@ var team1btn = document.createElement("button");
 team1btn.setAttribute("class", "btn btn-info");
 team1btn.setAttribute("id", "hit1");
 team1btn.setAttribute("onclick", "hit1()");
-team1btn.innerText = "Hit 1";
+team1btn.innerText = "Hit";
 row2col1.appendChild(team1btn);
 row2.appendChild(row2col1);
 //......................row2 col2.............................................
@@ -58,7 +58,7 @@ var team2btn = document.createElement("button");
 team2btn.setAttribute("class", "btn btn-info");
 team2btn.setAttribute("onclick", "hit2()");
 team2btn.setAttribute("id", "hit2");
-team2btn.innerText = "Hit 2";
+team2btn.innerText = "Hit";
 row2col3.appendChild(team2btn);
 row2.appendChild(row2col3);
 container.appendChild(row2);
