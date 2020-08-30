@@ -15,7 +15,7 @@ class pet {
     this.breed = parameters.breed;
     this.history = parameters.history;
     this.Location = parameters.Location;
-}
+  }
 }
 
 class request {
