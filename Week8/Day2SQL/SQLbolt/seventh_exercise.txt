@@ -1,4 +1,4 @@
-# Seven Exercise
+# Seventh Exercise
 ## https://sqlbolt.com/lesson/select_queries_with_outer_joins
 
 
@@ -15,13 +15,13 @@ LIMIT num_limit OFFSET num_offset;
 
 ### <---------------------------- EXERCISES ------------------------------------>
 
-1.Find the domestic and international sales for each movie 
-    SELECT * FROM Movies INNER JOIN Boxoffice ON Movies.id = Boxoffice.Movie_id;
+1.Find the list of all buildings that have employees.
+    SELECT DISTINCT building FROM employees;
 
 
-2.Show the sales numbers for each movie that did better internationally rather than domestically.
-    SELECT * FROM Movies INNER JOIN Boxoffice ON Movies.id = Boxoffice.Movie_id WHERE International_sales > Domestic_sales;
+2.Find the list of all buildings and their capacity.
+    SELECT * FROM Buildings;
 
 
 3.List all the movies by their ratings in descending order.
-    SELECT * FROM Movies INNER JOIN Boxoffice ON Movies.id = Boxoffice.Movie_id ORDER BY Rating DESC;
+    SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building;
