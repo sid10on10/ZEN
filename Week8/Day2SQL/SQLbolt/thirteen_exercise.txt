@@ -1,0 +1,25 @@
+# 13 Exercise
+
+
+Insert statement with values for all columns
+INSERT INTO mytable
+VALUES (value_or_expr, another_value_or_expr, …),
+       (value_or_expr_2, another_value_or_expr_2, …),
+       …;
+
+INSERT INTO mytable
+(column, another_column, …)
+VALUES (value_or_expr, another_value_or_expr, …),
+      (value_or_expr_2, another_value_or_expr_2, …),
+      …;
+
+
+### <---------------------------- EXERCISES ------------------------------------>
+
+1.Add the studio's new production, Toy Story 4 to the list of movies (you can use any director.
+    INSERT INTO movies VALUES (4, "Toy Story 4", "El Directore", 2015, 90);
+
+2.Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table.
+    INSERT INTO boxoffice VALUES (4, 8.7, 340000000, 270000000);
+
+
