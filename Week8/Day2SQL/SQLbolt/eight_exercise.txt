@@ -1,5 +1,4 @@
 # Eight Exercise
-## https://sqlbolt.com/lesson/select_queries_with_nulls
 
 
 Select query with constraints on NULL values

@@ -1,5 +1,4 @@
 # Seventh Exercise
-## https://sqlbolt.com/lesson/select_queries_with_outer_joins
 
 
 Select query with LEFT/RIGHT/FULL JOINs on multiple tables

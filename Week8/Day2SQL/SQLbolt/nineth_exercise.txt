@@ -1,6 +1,4 @@
-# Eight Exercise
-## https://sqlbolt.com/lesson/select_queries_with_nulls
-
+# 09 Exercise
 
 Select query with constraints on NULL values
 
@@ -14,12 +12,20 @@ AND/OR …;
 
 ### <---------------------------- EXERCISES ------------------------------------>
 
-1.Find the name and role of all employees who have not been assigned to a building.
-    SELECT Name,Role FROM employees WHERE Building IS NULL;
+1.List all movies and their combined sales in millions of dollars.
+    SELECT *,(Domestic_Sales+International_Sales)/1000000 FROM movies INNER JOIN Boxoffice ON id=Movie_id;
 
 
 
-2.Find the names of the buildings that hold no employees.
-    SELECT * FROM Buildings LEFT JOIN Employees ON Building_name=Building
-    WHERE ROLE IS NULL;
+2.List all movies and their ratings in percent.
+    SELECT title, rating * 10 AS rating_percent FROM movies
+    JOIN boxoffice
+        ON movies.id = boxoffice.movie_id;
+
+3.List all movies that were released on even number years.
+    SELECT Title,Year
+        FROM movies
+        JOIN boxoffice
+            ON movies.id = boxoffice.movie_id
+        WHERE Year%2=0;
 

@@ -1,5 +1,4 @@
 # Sixth Exercise
-## https://sqlbolt.com/lesson/select_queries_with_joins
 
 
 Select query with INNER JOIN on multiple tables
