@@ -1,0 +1,3 @@
+CompanyDrives Collection
+
+db.companyDrives.insertOne({companyName:"Paypal",companyDriveDate:28/10/2020,companyID:10,companyType:"Product Based"})
