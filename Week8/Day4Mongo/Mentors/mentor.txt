@@ -1,0 +1,3 @@
+Mentors Collection
+
+db.mentors.insertOne({mentorName:"Venkat sir",mentorEmail:"venkat@guvi.in",studentsCountForMentors:3})
