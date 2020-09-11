@@ -1,0 +1,3 @@
+Codekata Collection
+
+db.codekata.insertOne({codekataCategoryName:"Arrays",codekataQuestioId:10,codekataQuestionStatus:"Solved"})
