@@ -1,0 +1,3 @@
+Tasks Collection
+
+db.dailyTasks.insertOne({taskName:"MongoDB",taskType:"Daily Task",taskGivenDate:11/09/2020,taskDeadline:12/09/2020,taskUrl:"www.guvi.in/demo_url"})
