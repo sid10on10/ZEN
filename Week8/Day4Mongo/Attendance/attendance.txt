@@ -1,0 +1,3 @@
+Attendance Collection
+
+db.attendance.insertOne({attendanceStatus:"Attended",attendanceDate:20/07/2020})
