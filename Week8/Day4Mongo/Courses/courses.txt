@@ -1,0 +1,3 @@
+Courses Collection
+
+db.courses.insertOne({courseName:"MongoDB",courseCategory:"Database",courseDuration:3,courseAuthorName:"Venkat Sir"})
