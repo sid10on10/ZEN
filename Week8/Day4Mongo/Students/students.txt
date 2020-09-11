@@ -1,0 +1,9 @@
+Students Collection
+
+db.students.insert({
+	name:"Siddhant",
+	email:"sid10on10@gmail.com",
+	mobile:8756196694,
+	dob:19/12/1997,
+	occupation:"Engineer"
+})
