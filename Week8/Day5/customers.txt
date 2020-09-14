@@ -1,0 +1,43 @@
+1. db.customers.find().pretty()
+
+#######################################################
+
+{
+	"_id" : ObjectId("5f5ee187b354802fb0ac61a0"),
+	"customer_id" : 1,
+	"customer_name" : "Venkat Sir",
+	"email" : "venkat@guvi.in",
+	"phone" : 1234567890,
+	"address" : {
+		"flat_no" : 93,
+		"street_no" : 13,
+		"city" : "varanasi",
+		"pin_code" : 221001
+	}
+}
+{
+	"_id" : ObjectId("5f5ee187b354802fb0ac61a1"),
+	"customer_id" : 2,
+	"customer_name" : "Chandrashekhar Sir",
+	"email" : "puzh@guvi.in",
+	"phone" : 1234567891,
+	"address" : {
+		"flat_no" : 13,
+		"street_no" : 13,
+		"city" : "Chennai",
+		"pin_code" : 221313
+	}
+}
+{
+	"_id" : ObjectId("5f5ee187b354802fb0ac61a2"),
+	"customer_id" : 3,
+	"customer_name" : "Ashwini Mam",
+	"email" : "ashwini@guvi.in",
+	"phone" : 1234567892,
+	"address" : {
+		"flat_no" : 31,
+		"street_no" : 31,
+		"city" : "Chennai",
+		"pin_code" : 2213131
+	}
+}
