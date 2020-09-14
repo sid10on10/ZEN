@@ -1,0 +1,31 @@
+2. db.orders.find().pretty()
+
+#################################################################
+
+{
+	"_id" : ObjectId("5f5ee3ffb354802fb0ac61a3"),
+	"order_id" : 1,
+	"customer_id" : 1,
+	"order_date" : -2013,
+	"total_price" : 2500,
+	"pet_id" : 1
+}
+{
+	"_id" : ObjectId("5f5ee3ffb354802fb0ac61a4"),
+	"order_id" : 2,
+	"customer_id" : 3,
+	"order_date" : -2013,
+	"total_price" : 7500,
+	"pet_id" : [
+		2,
+		3
+	]
+}
+{
+	"_id" : ObjectId("5f5ee3ffb354802fb0ac61a5"),
+	"order_id" : 3,
+	"customer_id" : 2,
+	"order_date" : -2013,
+	"total_price" : 500,
+	"pet_id" : 4
+}
