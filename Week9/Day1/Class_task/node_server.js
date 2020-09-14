@@ -2,6 +2,8 @@ const fs = require("fs")
 const http = require("http")
 const path = require("path")
 
+let host = "localhost";
+let port = 800;
 
 let str = "";
     fs.readdir("/Users/sid/notatee",{ withFileTypes: true },function(err,files){
@@ -16,7 +18,9 @@ let str = "";
     });
 
 http.createServer(function(req,res){
-    res.writeHead(200,{'content-Type':'text-html'})
+    res.writeHead(200,{'content-Type':'text/html'})
     res.write(`<h1>${str}</h1>`)
     res.end()
-}).listen(8080)
+}).listen(port,host,() => {
+    console.log(`Server is running on http://${host}:${port}`);
+})
