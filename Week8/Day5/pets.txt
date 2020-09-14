@@ -1,0 +1,65 @@
+3. db.pets.find().pretty()
+
+#################################################################
+
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61a6"),
+	"id" : "1",
+	"name" : "Tommy",
+	"type" : "Dog",
+	"breed" : "Rotwiller",
+	"age" : "3 Months",
+	"previous_owner" : "Vishal",
+	"price" : 1500
+}
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61a7"),
+	"id" : "2",
+	"name" : "lufi",
+	"type" : "Dog",
+	"breed" : "labrador",
+	"age" : "10 Months",
+	"previous_owner" : "Venkat Sir",
+	"price" : 2500
+}
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61a8"),
+	"id" : "3",
+	"name" : "lucy",
+	"type" : "Dog",
+	"breed" : "Jerman Sheffard",
+	"age" : "10 Months",
+	"previous_owner" : "Ashwini Mam",
+	"price" : 7500
+}
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61a9"),
+	"id" : "4",
+	"name" : "Catalina",
+	"type" : "Cat",
+	"breed" : "Just cat",
+	"age" : "5 Months",
+	"previous_owner" : "Puzh Sir",
+	"price" : 1500
+}
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61aa"),
+	"id" : "5",
+	"name" : "Murphy",
+	"type" : "cat",
+	"breed" : "Just cat",
+	"age" : "15 Months",
+	"previous_owner" : "Arun Sir",
+	"price" : 5500
+}
+{
+	"_id" : ObjectId("5f5ee617b354802fb0ac61ab"),
+	"id" : "6",
+	"name" : "Hound",
+	"type" : "Dog",
+	"breed" : "Jerman Sheffard",
+	"age" : "15 Months",
+	"previous_owner" : "Umesh",
+	"price" : 10500
+}
+
