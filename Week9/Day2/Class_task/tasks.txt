@@ -1,0 +1,46 @@
+List of Students
+List of Teachers
+
+Create a API to map a teacher to a particular student
+Pass teacherId and StudentId
+
+[
+{
+id : 1,
+name : "vasanth",
+teacher : 1
+}
+]
+
+[
+{
+id : 1,
+name : "Arun",
+students : [1,2]
+}
+]
+
+Create API to list Student with teacher Details by StudentId
+{
+id : 1,
+name : "Vasanth",
+teacher : {
+		name : "Arun"
+	}
+}
+
+Creaet API to list teacher with student details by TeacherId
+{
+id : 1,
+name : "Arun",
+students : [
+	{
+		id : 1,
+		name : "Vasanth"
+	},
+	{
+		id : 2,
+		name : "Vasanth"
+	}
+	]
+}
