@@ -3,7 +3,7 @@ const http = require("http")
 const path = require("path")
 
 let host = "localhost";
-let port = 800;
+let port = 8080;
 
 let str = "";
     fs.readdir("/Users/sid/notatee",{ withFileTypes: true },function(err,files){
