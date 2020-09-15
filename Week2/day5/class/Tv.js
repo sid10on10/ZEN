@@ -60,7 +60,7 @@ class LED extends TV{
 
 class PlasmaTV extends TV{
     constructor(screenThickness, energyUse, lifeSpan, refreshRate, ...args){
-        super(args);
+        super(...args);
         this.screenThickness = screenThickness;
         this.energyUse = energyUse;
         this.lifeSpan = lifeSpan;
