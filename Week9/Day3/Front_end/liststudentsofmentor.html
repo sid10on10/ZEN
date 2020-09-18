@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .innerbox{
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+        }
+        .submitdiv{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="container innerbox">
+            <ol id="list"></ol>
+        </div>
+        <div class="container innerbox">  
+            <form onsubmit="showstudents()">
+                <div class="form-group">
+                    <label for="mentorselect">Select Mentor</label>
+                    <select class="form-control" id="mentorselect">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>  
+    
+    <script>
+        async function mentorlist(){
+            try{
+            let response = await fetch("http://localhost:8080/mentors")
+            let data = await response.json()
+            data.forEach(element => {
+                let option = document.createElement("option")
+                option.innerText = element.name
+                let select = document.getElementById("mentorselect")
+                select.appendChild(option)
+            });
+            // console.log(data)
+            }catch(error){
+                console.log(error)
+            }
+            
+        }
+        mentorlist();
+        async function showstudents(){
+            try{
+                let mentor = document.getElementById("mentorselect").value
+                let url = "http://127.0.0.1:8080/students"
+                console.log(url)
+                let response = await fetch(url)
+                let data = await response.json()
+                console.log(data)
+            }catch(error){
+                console.log(error)
+            }
+        }
+    </script>
+</body>
+</html>
