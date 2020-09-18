@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Mentor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .innerbox{
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+        }
+        .submitdiv{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="container innerbox">
+            <ol id="list"></ol>
+        </div>
+        <div class="container innerbox mt-10">  
+            <form onsubmit="">
+                <div class="form-group">
+                    <label for="mentorselect">Mentor select</label>
+                    <select class="form-control" id="mentorselect">
+                        <option value=""></option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="studentselect">Select Multiple Student</label>
+                    <select multiple class="form-control" id="studentselect">
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-primary" onclick="assignmentor()">Submit</button>
+            </form>
+        </div>
+    </div>  
+    
+    <script>
+        async function mentorlist(){
+            try{
+            let response = await fetch("http://localhost:8080/mentors")
+            let data = await response.json()
+            data.forEach(element => {
+                let option = document.createElement("option")
+                option.innerText = element.name
+                let select = document.getElementById("mentorselect")
+                select.appendChild(option)
+            });
+            // console.log(data)
+            }catch(error){
+                console.log(error)
+            }
+            
+        }
+        mentorlist();
+        async function studentlist(){
+            try{
+            let response = await fetch("http://localhost:8080/students")
+            let data = await response.json()
+            data.forEach(element => {
+                let option = document.createElement("option")
+                option.innerText = element.name
+                let select = document.getElementById("studentselect")
+                select.appendChild(option)
+            });
+            // console.log(data)
+            }catch(error){
+                console.log(error)
+            }
+            
+        }
+        studentlist();
+        async function assignmentor(){
+            let mentorname = document.getElementById("mentorselect").value
+            let options = document.querySelectorAll("#studentselect > option:checked");
+            let students = [];
+            options.forEach((option) => {
+                students.push(option.value);
+            });
+            let data = {
+                name:mentorname,
+                students:students
+            }
+            await fetch(`http://localhost:8080/mentors/${mentorname}`,{
+                method:"POST",
+                body:JSON.stringify(data),
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            console.log("post done")
+        }
+    </script>
+</body>
+</html>
