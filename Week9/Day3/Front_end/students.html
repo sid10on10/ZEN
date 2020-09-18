@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .innerbox{
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+        }
+        .submitdiv{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="container innerbox">
+            <ol id="list"></ol>
+        </div>
+        <div class="container innerbox">  
+            <form onsubmit="">
+                <div class="form-group"> 
+                    <label for="student">Add Student</label>
+                    <input type="text" name="" id="student" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="addstudent()">Submit</button>
+            </form>
+        </div>
+    </div>  
+    
+    <script>
+        async function addstudent(){
+            let data ={
+                name:document.getElementById("student").value
+            }
+            await fetch("http://localhost:8080/students/",{
+                method:"POST",
+                body:JSON.stringify(data),
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            console.log("Done")
+        }
+        async function studentlist(){
+            try{
+            let response = await fetch("http://localhost:8080/students/")
+            let data = await response.json()
+            data.forEach(element => {
+                let li = document.createElement("li")
+                li.innerText = element.name
+                let ol = document.getElementById("list")
+                ol.appendChild(li)
+            });
+            }catch(error){
+                console.log(error)
+            }
+            
+        }
+        studentlist();
+    </script>
+</body>
+</html>
