@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-class App extends React.Component{
+class App extends Component{
   constructor(){
     super()
     this.state={
@@ -13,8 +11,7 @@ class App extends React.Component{
    
   
   plus=()=>{
-    this.state.temp = this.state.temp + 1
-    this.setState({temp:this.state.temp})
+    this.setState(prevState=>{return {temp:prevState.temp+1 }})
     }
   minus=()=>{
     this.setState(prevState=>{return {temp:prevState.temp-1 }})
@@ -26,11 +23,11 @@ class App extends React.Component{
     render(){
     const {temp}=this.state
     return(
-       <div style={{marginLeft:"40%"}}>
+       <div style={{marginLeft:"40%"}} className="container">
           <h1 style={{marginLeft:"4%"}}>{temp}</h1>
-          <button onClick={this.plus}>Increase</button>
-          <button onClick={this.reset}>Reset</button>
-          <button onClick={this.minus}>Decrease</button> 
+          <button onClick={this.plus} className="btn btn-primary mr-1">Increase</button>
+          <button onClick={this.reset} className="btn btn-primary mr-1">Reset</button>
+          <button onClick={this.minus} className="btn btn-primary mr-1">Decrease</button> 
        </div>
      )
    }
