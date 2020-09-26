@@ -8,7 +8,7 @@ const cors = require("cors")
 const app = express();
 const PORT = process.env.PORT || 8080;
 const mongoClient = mongodb.MongoClient;
-const url = "mongodb+srv://siddhant:qwerty123@cluster0.fqer8.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url = "mongodb+srv://siddhant:qwerty123@cluster0.fqer8.mongodb.net/assignmentor?retryWrites=true&w=majority";
 
 app.use(bodyParser.json())
 app.use(cors({
